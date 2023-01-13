@@ -9,7 +9,7 @@ const generateSass = require("./generateSass");
 function activate(context) {
     /**
      // // todo get the selected text from a particular document.
-     // todo convert the selected html/jsx to a boiler template in SASS.
+     // // todo convert the selected html/jsx to a boiler template in SASS.
      // // todo create a new file with the same name as the input document, except with extension as scss.
      // // todo add an import line in the current document file.
      // // todo open the newly created scss file.
