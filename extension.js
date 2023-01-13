@@ -1,6 +1,7 @@
 const vscode = require("vscode");
 const { TextEncoder } = require("util");
 const { getFileName, replaceFileExtension } = require("./utils");
+const generateSass = require("./generateSass");
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -44,7 +45,7 @@ function activate(context) {
 
             await vscode.workspace.fs.writeFile(
                 newFileUri,
-                new TextEncoder().encode(text)
+                new TextEncoder().encode(generateSass(text))
             );
 
             const doc = await vscode.workspace.openTextDocument(newFileUri);
