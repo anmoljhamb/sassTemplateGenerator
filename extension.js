@@ -21,7 +21,7 @@ function activate(context) {
      // todo convert the selected html/jsx to a boiler template in SASS.
      // // todo create a new file with the same name as the input document, except with extension as scss.
      // // todo add an import line in the current document file.
-     // todo open the newly created scss file.
+     // // todo open the newly created scss file.
      */
 
     console.log(
@@ -57,10 +57,13 @@ function activate(context) {
                 new TextEncoder().encode(text)
             );
 
+            const doc = await vscode.workspace.openTextDocument(newFileUri);
+            await vscode.window.showTextDocument(doc);
+
             editor.document.save();
 
             vscode.window.showInformationMessage(
-                `SCSS Boiler Template Generated at the path: ${newFilePath}`
+                `SCSS Boiler Template Generated.`
             );
         }
     );
