@@ -2,7 +2,16 @@
     "name": "sass_template_generator",
     "displayName": "Sass Template Generator",
     "description": "An extension to generate a boiler template for sass/scss from given HTML/JSX",
-    "version": "0.0.1",
+    "version": "1.0.0",
+    "author": {
+        "name": "Anmol Jhamb",
+        "email": "talktoanmol@outlook.com",
+        "url": "https://anmoljhamb.vercel.app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anmoljhamb/sassTemplateGenerator"
+    },
     "engines": {
         "vscode": "^1.74.0"
     },

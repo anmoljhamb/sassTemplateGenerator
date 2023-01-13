@@ -1,65 +1,65 @@
-# sassTemplateGenerator README
+# SASS Template Generator
 
-This is the README for your extension "sassTemplateGenerator". After writing up a brief description, we recommend including the following sections.
+A VSCode Extension to generate a SASS/SCSS Template from a given HTML or JSX.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Generate a template from your given HTML or SCSS instead of having to type out the skeleton yourself.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![screenshot](./screenshot.png)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+The only requirment for the given extension is `node-html-parser: ^6.1.4`. To install it, change your directory to the given folder, and simply run, `npm install`.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+One of the issues that I am currently working to fix is when you have multiple elements as a child, with the same tag, without any class or ID, so the extension generates a parent with 4 child with the same name.
+
+For example,
+Input:
+
+```html
+<nav>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</nav>
+```
+
+It will be converted to
+Output:
+
+```scss
+nav {
+    ul {
+        li {
+        }
+        li {
+        }
+        li {
+        }
+        li {
+        }
+    }
+}
+```
+
+If you face any other issues while using the extension, please create an issue in the issues tab.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+Release Notes for SASS Template Generator
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of SASS Template Generator
 
 ---
 
-## Working with Markdown
+## Feedback
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+If you have any feedback, please reach out to me at talktoanmol@outlook.com
