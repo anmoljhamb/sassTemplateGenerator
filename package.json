@@ -1,5 +1,5 @@
 {
-    "name": "sass_template_generator",
+    "name": "sassTemplateGenerator",
     "displayName": "Sass Template Generator",
     "description": "An extension to generate a boiler template for sass/scss from given HTML/JSX",
     "version": "1.0.0",
