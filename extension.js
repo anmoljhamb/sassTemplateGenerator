@@ -1,16 +1,6 @@
 const vscode = require("vscode");
 const { TextEncoder } = require("util");
-
-const replaceFileExtension = (fileName, extension = ".scss") => {
-    const exp = /\.([A-Za-z0-9]+)$/;
-    return fileName.replace(exp, extension);
-};
-
-const getFileName = (filePath) => {
-    // extract a fileName from the given filePath.
-    const arr = filePath.split("/");
-    return arr.at(-1);
-};
+const { getFileName, replaceFileExtension } = require("./utils");
 
 /**
  * @param {vscode.ExtensionContext} context
