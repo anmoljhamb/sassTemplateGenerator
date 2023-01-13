@@ -30,14 +30,14 @@ function activate(context) {
                 oldFilePathUri
             );
 
-            const updatedText = `import "./${getFileName(
-                newFilePath
-            )}";\n${oldFileData}`;
-
-            await vscode.workspace.fs.writeFile(
-                oldFilePathUri,
-                new TextEncoder().encode(updatedText)
-            );
+            const temp = `import "./${getFileName(newFilePath)}";`;
+            if (temp !== oldFileData.toString().split("\n")[0]) {
+                const updatedText = `${temp}\n${oldFileData}`;
+                await vscode.workspace.fs.writeFile(
+                    oldFilePathUri,
+                    new TextEncoder().encode(updatedText)
+                );
+            }
 
             await vscode.workspace.fs.writeFile(
                 newFileUri,
