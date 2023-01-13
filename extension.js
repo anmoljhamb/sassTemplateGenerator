@@ -15,10 +15,6 @@ function activate(context) {
      // // todo open the newly created scss file.
      */
 
-    console.log(
-        'Congratulations, your extension "sass_template_generator" is now active!'
-    );
-
     let disposable = vscode.commands.registerCommand(
         "sassTemplateGenerator.generateSass",
         async function () {
