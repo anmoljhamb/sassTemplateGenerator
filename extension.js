@@ -5,7 +5,7 @@ const vscode = require("vscode");
  */
 function activate(context) {
     /**
-     * todo get the selected text from a particular document.
+     // // * todo get the selected text from a particular document.
      * todo convert the selected html/jsx to a boiler template in SASS.
      * todo create a new file with the same name as the input document, except with extension as scss.
      * todo add an import line in the current document file.
@@ -19,8 +19,10 @@ function activate(context) {
     let disposable = vscode.commands.registerCommand(
         "sassTemplateGenerator.generateSass",
         function () {
+            const editor = vscode.window.activeTextEditor;
+            const text = editor.document.getText(editor.selection);
             vscode.window.showInformationMessage(
-                "Hello World from Sass Template Generator!"
+                `Selected text from the current document is: ${text}`
             );
         }
     );
