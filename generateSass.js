@@ -12,8 +12,8 @@ const generateSass = (html) => {
                 let identifier = null;
                 const id = node.id;
 
-                const exp1 = new RegExp(/className="(.*)"/);
-                const exp2 = new RegExp(/class="(.*)"/);
+                const exp1 = new RegExp(/className="(.*?)"/);
+                const exp2 = new RegExp(/class="(.*?)"/);
 
                 if (id) {
                     identifier = `#${id}`;
