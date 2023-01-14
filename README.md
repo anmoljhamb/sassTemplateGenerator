@@ -54,6 +54,10 @@ If you face any other issues while using the extension, please create an issue i
 
 Release Notes for SASS Template Generator
 
+### 1.0.1
+
+Minor bug fix. The regex pattern I used was in the greedy mode, which should have been lazy mode. Which lead to a minor bug in cases like. `<div class="abc" someOtherAttrb="def">` which would lead to the regex finding the pattern: `abc" someOtherAttrb="def` instead of the `abc` as it should have. Just had to change it to lazy mode.
+
 ### 1.0.0
 
 Initial release of SASS Template Generator
